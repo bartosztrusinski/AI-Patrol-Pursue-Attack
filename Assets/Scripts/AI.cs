@@ -4,7 +4,6 @@ using UnityEngine.AI;
 public class AI : MonoBehaviour
 {
   NavMeshAgent agent;
-  Animator anim;
   State currentState;
 
   public Transform player;
@@ -12,8 +11,7 @@ public class AI : MonoBehaviour
   void Start()
   {
     agent = GetComponent<NavMeshAgent>();
-    anim = GetComponent<Animator>();
-    currentState = new Idle(gameObject, agent, anim, player);
+    currentState = new Idle(gameObject, agent, player);
   }
 
 
